@@ -1,20 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="1">
+    tools:context="com.example.huliaaaa.groupcalendar.CalendarsPage">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/appBarLayout">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
 
     <Button
         android:id="@+id/button5"
         android:layout_width="match_parent"
         android:layout_height="54dp"
+        android:onClick="goToCalendars"
         android:text="My Calendars                                  >"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="-8dp"
-        tools:layout_editor_absoluteY="77dp" />
+        tools:layout_editor_absoluteY="77dp"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/button6"
@@ -23,7 +41,9 @@
         android:text="Group Calendars                          >"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="-11dp"
-        tools:layout_editor_absoluteY="122dp" />
+        tools:layout_editor_absoluteY="122dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button5" />
 
     <CalendarView
         android:id="@+id/calendarView2"
@@ -34,7 +54,10 @@
         android:selectedWeekBackgroundColor="@color/colorAccent"
         android:weekNumberColor="@color/colorAccent"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="200dp" />
+        tools:layout_editor_absoluteY="200dp"
+        android:layout_above="@+id/textClock"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="22dp" />
 
     <TextClock
         android:id="@+id/textClock"
@@ -43,6 +66,9 @@
         android:layout_weight="0.99"
         android:fontFamily="monospace"
         android:textAlignment="center"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="16dp" />
 
-</LinearLayout>
+</android.widget.RelativeLayout>

@@ -45,7 +45,7 @@ public class LoginScreen extends AppCompatActivity implements LoaderCallbacks<Cu
      */
     public void nextpage(View v)
     {
-        Intent nextpagge = new Intent(LoginScreen.this,AccountPAge.class);
+        Intent nextpagge = new Intent(LoginScreen.this,MainMenu.class);
         startActivity(nextpagge);
     }
     private static final int REQUEST_READ_CONTACTS = 0;
